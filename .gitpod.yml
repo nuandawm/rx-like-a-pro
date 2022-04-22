@@ -3,8 +3,11 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - init: npm install && npm run build
+  - name: Angular
+    init: npm install && npm run build
     command: npm run start
+  - name: Node API
+    command: npm run api
 ports:
   - port: 4200
     onOpen: open-browser
